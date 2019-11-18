@@ -1,0 +1,13 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/mybatis_study2?serverTimezone=UTC&amp;useSSL=false
+    username: root
+    password: Admin123.
+
+mybatis:
+    mapper-locations: classpath:/mybatis/mapper/*.xml
+
+
