@@ -1,6 +1,9 @@
 package com.example.studyMybatis.mapper;
 
+import com.example.studyMybatis.pojo.SysRole;
 import com.example.studyMybatis.pojo.SysUser;
+
+import java.util.List;
 
 /**
  * @PackageName: com.example.studyMabatis.dao
@@ -17,4 +20,12 @@ public interface UserMapper {
      * @return
      */
     SysUser selectById(Long id);
+
+    /**
+     * 查询全部用户
+     * @return
+     */
+    List<SysUser> selectAll();
+
+    List<SysRole> selectRoleByUserId(Long userId);
 }

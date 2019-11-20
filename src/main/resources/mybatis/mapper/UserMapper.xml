@@ -14,4 +14,31 @@
     <select id="selectById" resultMap="userMap">
         SELECT * FROM sys_user WHERE id = #{id}
     </select>
+    
+    <select id="selectAll" resultType="com.example.studyMybatis.pojo.SysUser">
+        SELECT id,
+            user_name userName,
+            user_password userPassword,
+            user_email userEmail,
+            user_info userInfo,
+            head_img headImg,
+            create_time createTime
+        FROM sys_user
+    </select>
+
+    <select id="selectRoleByUserId" resultType="com.example.studyMybatis.pojo.SysRole">
+        SELECT
+            r.id,
+            r.role_name roleName,
+            r.enabled,
+            r.create_by createBy,
+            r.create_time createTime,
+            u.user_name as "user.userName",
+            u.user_email as "user.userEmail"
+        FROM sys_user u
+        INNER JOIN sys_user_role ur on u.id = ur.user_id
+        INNER JOIN sys_role r on ur.role_id = r.id
+        WHERE u.id = #{userId}
+    </select>
+
 </mapper>
