@@ -41,4 +41,19 @@
         WHERE u.id = #{userId}
     </select>
 
+    <insert id="insert">
+        INSERT INTO sys_user(
+            id, user_name, user_password, user_email,
+            user_info, head_img, create_time
+        )
+        values (
+            #{id}, #{userName}, #{userPassword}, #{userEmail},
+            #{userInfo}, #{headImg, jdbcType=BLOB},
+            #{createTime, jdbcType= TIMESTAMP}
+        )
+        <selectKey keyColumn="id" resultType="long" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
 </mapper>

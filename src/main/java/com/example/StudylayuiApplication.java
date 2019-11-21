@@ -10,6 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Date;
 import java.util.List;
 
 @SpringBootApplication
@@ -36,7 +37,7 @@ public class StudylayuiApplication implements CommandLineRunner {
         //for (SysUser sysUser1 : userList){
         //    System.out.println(sysUser1);
         //}
-        testSelectRoleByUserId();
+        testInsert();
 
     }
 
@@ -44,5 +45,17 @@ public class StudylayuiApplication implements CommandLineRunner {
     public void testSelectRoleByUserId() {
         List<SysRole> roleList = userMapper.selectRoleByUserId(1L);
         System.out.println(roleList);
+    }
+
+
+    public void testInsert(){
+        SysUser user = new SysUser();
+        user.setUserName("test1");
+        user.setUserPassword("123456");
+        user.setUserEmail("test@mybatis.tk");
+        user.setUserInfo("test info");
+        user.setHeadImg(new byte[]{1, 2, 3});
+        user.setCreateTime(new Date());
+        int result = userMapper.insert(user);
     }
 }
