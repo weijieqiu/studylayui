@@ -55,11 +55,27 @@ public class StudylayuiApplication implements CommandLineRunner {
         //testSelectAllUserAndRoles();
         //testGetAllSysRole();
         //testGetAllRoleAndPrivilege();
-        testSelectAllUserAndRoles();
-        testGetAllRoleAndPrivilege();
+        //testSelectAllUserAndRoles();
+        //testGetAllRoleAndPrivilege();
+        testSelectAllUserAndRoleAndPrivilege();
     }
 
+    private void testSelectAllUserAndRoleAndPrivilege() {
 
+        List<SysUser> sysUserList = userMapper.selectAllUserAndRoleAndPrivilege();
+        for(SysUser sysUser : sysUserList){
+            logger.debug("用户名:" + sysUser.getUserName());
+            List<SysRole> sysRoleList = sysUser.getRoleList();
+            for(SysRole sysRole : sysRoleList){
+                logger.debug("角色名: "+sysRole.getRoleName());
+                List<SysPrivilege> sysPrivilegeList = sysRole.getSysPrivilegeList();
+                for (SysPrivilege sysPrivilege : sysPrivilegeList){
+                    logger.debug("权限信息: " + sysPrivilege.getPrivilegeName() + sysPrivilege.getPrivilegeUrl());
+
+                }
+            }
+        }
+    }
 
 
     //public void testSelectRoleByUserId() {

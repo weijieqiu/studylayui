@@ -21,4 +21,10 @@ public interface UserMapper {
      * @return
      */
     List<SysUser> selectAllUserAndRoles();
+
+    /**
+     * 查询所有用户对应的所有角色与所有权限，一对多，一对多关系
+     * @return
+     */
+    List<SysUser> selectAllUserAndRoleAndPrivilege();
 }

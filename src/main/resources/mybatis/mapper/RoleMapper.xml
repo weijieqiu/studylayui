@@ -21,11 +21,11 @@
     <select id="getAllRoleAndPrivilege" resultMap="rolePrivilegeList">
         SELECT
             sr.id,
-            sr.role_name ,
-            sr.enabled ,
-            sr.create_by ,
-            sr.create_time ,
-            sp.id ,
+            sr.role_name,
+            sr.enabled,
+            sr.create_by,
+            sr.create_time,
+            sp.id privilege_id,
             sp.privilege_name privilege_privilege_name,
             sp.privilege_url privilege_privilege_url
         FROM sys_role sr
