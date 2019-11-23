@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @PackageName: com.example.studyMabatis.pojo
@@ -44,6 +45,11 @@ public class SysUser {
      * 头像
      */
     private byte[] headImg;
+
+    /**
+     * 用户的角色集合
+     */
+    private List<SysRole> roleList;
 
     /**
      * 创建时间
@@ -107,16 +113,13 @@ public class SysUser {
         this.createTime = createTime;
     }
 
-    @Override
-    public String toString() {
-        return "SysUser{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                ", userInfo='" + userInfo + '\'' +
-                ", headImg=" + Arrays.toString(headImg) +
-                ", createTime=" + createTime +
-                '}';
+    public List<SysRole> getRoleList() {
+        return roleList;
     }
+
+    public void setRoleList(List<SysRole> roleList) {
+        this.roleList = roleList;
+    }
+
+
 }

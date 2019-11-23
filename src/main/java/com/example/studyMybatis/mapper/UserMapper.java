@@ -2,6 +2,7 @@ package com.example.studyMybatis.mapper;
 
 import com.example.studyMybatis.pojo.SysRole;
 import com.example.studyMybatis.pojo.SysUser;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -35,4 +36,26 @@ public interface UserMapper {
      * @return
      */
     int insert(SysUser sysUser);
+
+
+    /**
+     * 通过主键删除
+     * @param id
+     * @return
+     */
+    int deleteById(Long id);
+
+
+    SysRole selectRolesByUserIdAndRoleEnabled(@Param("userId") Long userId, @Param("enabled") Integer enabled);
+
+    List<SysUser> selectByUser(SysUser sysUser);
+
+    /**
+     * 根据主键更新
+     * @param sysUser
+     * @return
+     */
+    int updateByIdSelective(SysUser sysUser);
+
+    List<SysUser> selectAllUserAndRoles();
 }
