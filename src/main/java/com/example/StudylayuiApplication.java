@@ -76,8 +76,12 @@ public class StudylayuiApplication implements CommandLineRunner {
         int result = userMapper.updateByIdSelective(user);
     }
 
+    /**
+     * 测试查询所有的用户名和角色
+     */
     public void testSelectAllUserAndRoles() {
         List<SysUser> sysUsers =  userMapper.selectAllUserAndRoles();
+
         for (SysUser sysUser: sysUsers){
             System.out.println(sysUser);
             List<SysRole> sysRoles = sysUser.getRoleList();

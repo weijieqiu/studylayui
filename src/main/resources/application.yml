@@ -13,4 +13,6 @@ mybatis:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
       aggressive-lazy-loading: false
 
+logging:
+  level: debug
 
