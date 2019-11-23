@@ -6,8 +6,10 @@
         <id property="id" column="id"/>
         <result property="roleName" column="role_name"/>
         <result property="enabled" column="enabled"/>
-        <result property="createBy" column="create_by"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <association property="createInfo" javaType="com.example.studyMybatis.pojo.CreateInfo">
+            <result property="createBy" column="create_by"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        </association>
     </resultMap>
 
     <resultMap id="rolePrivilegeList" extends="sysRoleMap" type="com.example.studyMybatis.pojo.SysRole">

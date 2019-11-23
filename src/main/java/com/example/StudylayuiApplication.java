@@ -56,8 +56,8 @@ public class StudylayuiApplication implements CommandLineRunner {
         //testGetAllSysRole();
         //testGetAllRoleAndPrivilege();
         //testSelectAllUserAndRoles();
-        //testGetAllRoleAndPrivilege();
-        testSelectAllUserAndRoleAndPrivilege();
+        testGetAllRoleAndPrivilege();
+        //testSelectAllUserAndRoleAndPrivilege();
     }
 
     private void testSelectAllUserAndRoleAndPrivilege() {

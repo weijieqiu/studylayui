@@ -26,15 +26,17 @@ public class SysRole {
      */
     private Integer enabled;
 
-    /**
-     * 创建人
-     */
-    private Long createBy;
+    ///**
+    // * 创建人
+    // */
+    //private Long createBy;
+    //
+    ///**
+    // * 创建时间
+    // */
+    //private Date createTime;
 
-    /**
-     * 创建时间
-     */
-    private Date createTime;
+    private CreateInfo createInfo;
 
     private List<SysPrivilege> sysPrivilegeList;
 
@@ -70,19 +72,27 @@ public class SysRole {
         this.enabled = enabled;
     }
 
-    public Long getCreateBy() {
-        return createBy;
+    //public Long getCreateBy() {
+    //    return createBy;
+    //}
+    //
+    //public void setCreateBy(Long createBy) {
+    //    this.createBy = createBy;
+    //}
+    //
+    //public Date getCreateTime() {
+    //    return createTime;
+    //}
+    //
+    //public void setCreateTime(Date createTime) {
+    //    this.createTime = createTime;
+    //}
+
+    public CreateInfo getCreateInfo() {
+        return createInfo;
     }
 
-    public void setCreateBy(Long createBy) {
-        this.createBy = createBy;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreateInfo(CreateInfo createInfo) {
+        this.createInfo = createInfo;
     }
 }
