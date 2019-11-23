@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.studyMybatis.mapper.RoleMapper">
+    <!--    角色映射    -->
+    <resultMap id="sysRoleMap" type="com.example.studyMybatis.pojo.SysRole">
+        <id property="id" column="id"/>
+        <result property="roleName" column="role_name"/>
+        <result property="enabled" column="enabled"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <resultMap id="rolePrivilegeList" extends="sysRoleMap" type="com.example.studyMybatis.pojo.SysRole">
+        <collection property="sysPrivilegeList" columnPrefix="privilege_" resultMap="com.example.studyMybatis.mapper.PrivilegeMapper.privilegeMap">
+        </collection>
+    </resultMap>
+    <select id="getAllSysRole" resultMap="sysRoleMap">
+        SELECT * FROM sys_role
+    </select>
+
+    <select id="getAllRoleAndPrivilege" resultMap="rolePrivilegeList">
+        SELECT
+            sr.id,
+            sr.role_name ,
+            sr.enabled ,
+            sr.create_by ,
+            sr.create_time ,
+            sp.id ,
+            sp.privilege_name privilege_privilege_name,
+            sp.privilege_url privilege_privilege_url
+        FROM sys_role sr
+        INNER JOIN sys_role_privilege srp ON srp.role_id = sr.id
+        INNER JOIN sys_privilege sp ON srp.privilege_id = sp.id
+    </select>
+
+
+
+</mapper>

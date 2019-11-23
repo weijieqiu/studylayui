@@ -28,8 +28,8 @@ public class SysUserInfoController {
     @RequestMapping("/userinfo")
     public Map<String, Object> getUserInfo(){
         Map<String, Object> resultMap = new HashMap<>();
-        SysUser sysUser = userMapper.selectById(1L);
-        resultMap.put("result", sysUser);
+        //SysUser sysUser = userMapper.selectById(1L);
+        //resultMap.put("result", sysUser);
         return resultMap;
     }
 }

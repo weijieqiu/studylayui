@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.studyMybatis.mapper.PrivilegeMapper">
+
+    <!--  权限映射  -->
+    <resultMap id="privilegeMap" type="com.example.studyMybatis.pojo.SysPrivilege">
+        <id property="id" column="id"/>
+        <result property="privilegeName" column="privilege_name"/>
+        <result property="privilegeUrl" column="privilege_url"/>
+    </resultMap>
+</mapper>

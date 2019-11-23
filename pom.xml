@@ -80,6 +80,15 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--  引入 slf4j + logback 日志      -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
 
 
         <!-- JsonFormat -->

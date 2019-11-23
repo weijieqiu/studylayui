@@ -29,7 +29,7 @@ public class Application implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
-        SysUser sysUser = userMapper.selectById(1L);
-        System.out.println(sysUser.getCreateTime());
+        //SysUser sysUser = userMapper.selectById(1L);
+        //System.out.println(sysUser.getCreateTime());
     }
 }

@@ -1,6 +1,7 @@
 package com.example.studyMybatis.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @PackageName: com.example.studyMabatis.pojo
@@ -35,14 +36,14 @@ public class SysRole {
      */
     private Date createTime;
 
-    private SysUser user;
+    private List<SysPrivilege> sysPrivilegeList;
 
-    public SysUser getUser() {
-        return user;
+    public List<SysPrivilege> getSysPrivilegeList() {
+        return sysPrivilegeList;
     }
 
-    public void setUser(SysUser user) {
-        this.user = user;
+    public void setSysPrivilegeList(List<SysPrivilege> sysPrivilegeList) {
+        this.sysPrivilegeList = sysPrivilegeList;
     }
 
     public Long getId() {

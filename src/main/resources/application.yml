@@ -1,5 +1,5 @@
 server:
-  port: 8085
+  port: 8086
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -12,7 +12,6 @@ mybatis:
       map-underscore-to-camel-case: true
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
       aggressive-lazy-loading: false
-
 logging:
-  level: debug
-
+  level:
+    root: debug
