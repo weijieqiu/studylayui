@@ -27,4 +27,9 @@ public interface UserMapper {
      * @return
      */
     List<SysUser> selectAllUserAndRoleAndPrivilege();
+
+    /**
+     * MyBatis 动态 SQL if 的使用
+     */
+    List<SysUser> selectByUser(SysUser sysUser);
 }

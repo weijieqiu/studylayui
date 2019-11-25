@@ -86,23 +86,23 @@
     <!--    </select>-->
 
 
-    <!--    <select id="selectByUser" resultType="com.example.studyMybatis.pojo.SysUser">-->
-    <!--        SELECT id,-->
-    <!--        user_name userName,-->
-    <!--        user_password userPassword,-->
-    <!--        user_email userEmail,-->
-    <!--        user_info userInfo,-->
-    <!--        head_img headImg,-->
-    <!--        create_time createTime-->
-    <!--        FROM sys_user-->
-    <!--        WHERE 1 = 1-->
-    <!--        <if test="userName != null and userName != ''">-->
-    <!--            and user_name like concat('%', #{userName}, '%')-->
-    <!--        </if>-->
-    <!--        <if test="userEmail != null and userEmail != ''">-->
-    <!--            and user_email = #{userEmail}-->
-    <!--        </if>-->
-    <!--    </select>-->
+        <select id="selectByUser" resultType="com.example.studyMybatis.pojo.SysUser">
+            SELECT id,
+            user_name userName,
+            user_password userPassword,
+            user_email userEmail,
+            user_info userInfo,
+            head_img headImg,
+            create_time createTime
+            FROM sys_user
+            WHERE 1 = 1
+            <if test="userName != null and userName != ''">
+                and user_name like concat('%', #{userName}, '%')
+            </if>
+            <if test="userEmail != null and userEmail != ''">
+                and user_email = #{userEmail}
+            </if>
+        </select>
 
     <!--    <update id="updateByIdSelective">-->
     <!--        UPDATE sys_user-->
