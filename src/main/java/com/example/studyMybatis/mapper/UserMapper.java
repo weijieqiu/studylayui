@@ -16,6 +16,14 @@ import java.util.List;
 public interface UserMapper {
 
 
+
+    /**
+     * 通过 id 查用户
+     * @param id
+     * @return
+     */
+    SysUser selectByid(Long id);
+
     /**
      * 查询所有用户拥有的所有角色，一对多关系
      * @return
@@ -32,4 +40,14 @@ public interface UserMapper {
      * MyBatis 动态 SQL if 的使用
      */
     List<SysUser> selectByUser(SysUser sysUser);
+
+    /**
+     * 根据主键更新
+     *
+     * @param sysUser
+     * @return
+     */
+    int updateByIdSelective(SysUser sysUser);
+
+
 }

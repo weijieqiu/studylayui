@@ -22,9 +22,9 @@
 
 
 
-    <!--    <select id="selectById" resultMap="userMap">-->
-    <!--        SELECT * FROM sys_user WHERE id = #{id}-->
-    <!--    </select>-->
+        <select id="selectByid" resultMap="userMap">
+            SELECT * FROM sys_user WHERE id = #{id}
+        </select>
 
     <!--    <select id="selectAll" resultType="com.example.studyMybatis.pojo.SysUser">-->
     <!--        SELECT id,-->
@@ -104,30 +104,30 @@
             </if>
         </select>
 
-    <!--    <update id="updateByIdSelective">-->
-    <!--        UPDATE sys_user-->
-    <!--        SET-->
-    <!--            <if test="userName != null and userName != ''">-->
-    <!--                user_name = #{userName},-->
-    <!--            </if>-->
-    <!--            <if test="userPassword != null and userName != ''">-->
-    <!--                user_password = #{userPassword},-->
-    <!--            </if>-->
-    <!--            <if test="userEmail != null and userEmail != ''">-->
-    <!--                user_email = #{userEmail},-->
-    <!--            </if>-->
-    <!--            <if test="userInfo != null and userInfo != ''">-->
-    <!--                user_info = #{useerInfo},-->
-    <!--            </if>-->
-    <!--            <if test="headImg != null">-->
-    <!--                head_img = #{headImg, jdbcType=BLOB},-->
-    <!--            </if>-->
-    <!--            <if test="createTime != null">-->
-    <!--                create_time = #{createTime, jdbcType=TIMESTAMP},-->
-    <!--            </if>-->
-    <!--            id = #{id}-->
-    <!--        WHERE id = #{id}-->
-    <!--    </update>-->
+        <update id="updateByIdSelective">
+            UPDATE sys_user
+            SET
+                <if test="userName != null and userName != ''">
+                    user_name = #{userName},
+                </if>
+                <if test="userPassword != null and userName != ''">
+                    user_password = #{userPassword},
+                </if>
+                <if test="userEmail != null and userEmail != ''">
+                    user_email = #{userEmail},
+                </if>
+                <if test="userInfo != null and userInfo != ''">
+                    user_info = #{useerInfo},
+                </if>
+                <if test="headImg != null">
+                    head_img = #{headImg, jdbcType=BLOB},
+                </if>
+                <if test="createTime != null">
+                    create_time = #{createTime, jdbcType=TIMESTAMP},
+                </if>
+                id = #{id}
+            WHERE id = #{id}
+        </update>
 
     <select id="selectAllUserAndRoles" resultMap="userRoleListMap">
         SELECT

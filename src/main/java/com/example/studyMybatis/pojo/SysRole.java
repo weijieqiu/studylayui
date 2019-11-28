@@ -1,5 +1,7 @@
 package com.example.studyMybatis.pojo;
 
+import com.example.studyMybatis.type.Enabled;
+
 import java.util.Date;
 import java.util.List;
 
@@ -23,8 +25,12 @@ public class SysRole {
 
     /**
      * 有效标志
+     * 修改人: qiuweijie 2019-11-28
+     * 修改内容: 使用枚举类型有效标志
      */
-    private Integer enabled;
+    private Enabled enabled;
+
+
 
     ///**
     // * 创建人
@@ -64,13 +70,21 @@ public class SysRole {
         this.roleName = roleName;
     }
 
-    public Integer getEnabled() {
+    public Enabled getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(Integer enabled) {
+    public void setEnabled(Enabled enabled) {
         this.enabled = enabled;
     }
+
+    //public Integer getEnabled() {
+    //    return enabled;
+    //}
+    //
+    //public void setEnabled(Integer enabled) {
+    //    this.enabled = enabled;
+    //}
 
     //public Long getCreateBy() {
     //    return createBy;

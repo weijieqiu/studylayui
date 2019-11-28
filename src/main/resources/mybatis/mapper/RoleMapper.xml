@@ -16,6 +16,12 @@
         <collection property="sysPrivilegeList" columnPrefix="privilege_" resultMap="com.example.studyMybatis.mapper.PrivilegeMapper.privilegeMap">
         </collection>
     </resultMap>
+
+
+    <select id="selectByid" parameterType="long" resultMap="sysRoleMap">
+            SELECT * FROM sys_role WHERE id = #{id}
+    </select>
+
     <select id="getAllSysRole" resultMap="sysRoleMap">
         SELECT * FROM sys_role
     </select>

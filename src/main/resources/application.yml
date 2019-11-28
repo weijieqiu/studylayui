@@ -12,6 +12,7 @@ mybatis:
       map-underscore-to-camel-case: true
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
       aggressive-lazy-loading: false
+      default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
 logging:
   level:
     root: debug

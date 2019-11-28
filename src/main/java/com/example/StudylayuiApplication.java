@@ -6,6 +6,7 @@ import com.example.studyMybatis.pojo.SysPrivilege;
 import com.example.studyMybatis.pojo.SysRole;
 import com.example.studyMybatis.pojo.SysUser;
 import com.example.studyMybatis.pojo.SysUserRole;
+import com.example.studyMybatis.type.Enabled;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -56,8 +57,9 @@ public class StudylayuiApplication implements CommandLineRunner {
         //testGetAllSysRole();
         //testGetAllRoleAndPrivilege();
         //testSelectAllUserAndRoles();
-        testGetAllRoleAndPrivilege();
+        //testGetAllRoleAndPrivilege();
         //testSelectAllUserAndRoleAndPrivilege();
+        testUpdateById();
     }
 
     private void testSelectAllUserAndRoleAndPrivilege() {
@@ -149,6 +151,19 @@ public class StudylayuiApplication implements CommandLineRunner {
             for (SysPrivilege sysPrivilege:sysPrivilegeList){
                 logger.debug(sysPrivilege.getPrivilegeName() +sysPrivilege.getPrivilegeUrl());
             }
+        }
+
+    }
+
+    /**
+     * 测试枚举更新
+     */
+    public void testUpdateById(){
+        List<SysRole> sysRoleList = roleMapper.selectByid(2L);
+        for(SysRole sysRole: sysRoleList){
+           Enum e = sysRole.getEnabled();
+
+            logger.debug(String.valueOf(e));
         }
 
     }

@@ -1,6 +1,7 @@
 package com.example.studyMybatis.mapper;
 
 import com.example.studyMybatis.pojo.SysRole;
+import com.example.studyMybatis.pojo.SysUser;
 
 import java.util.List;
 
@@ -13,6 +14,8 @@ import java.util.List;
  */
 public interface RoleMapper {
 
+
+
     /**
      * 查询所有角色
      * @return
@@ -24,4 +27,8 @@ public interface RoleMapper {
      * @return
      */
     List<SysRole> getAllRoleAndPrivilege();
+
+
+    List<SysRole> selectByid(Long id);
+
 }
