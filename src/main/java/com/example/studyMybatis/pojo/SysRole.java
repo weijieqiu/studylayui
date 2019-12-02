@@ -1,8 +1,7 @@
 package com.example.studyMybatis.pojo;
 
-import com.example.studyMybatis.type.Enabled;
+import com.example.studyMybatis.enums.Enabled;
 
-import java.util.Date;
 import java.util.List;
 
 /**

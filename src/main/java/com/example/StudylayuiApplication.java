@@ -5,11 +5,6 @@ import com.example.studyMybatis.mapper.UserMapper;
 import com.example.studyMybatis.pojo.SysPrivilege;
 import com.example.studyMybatis.pojo.SysRole;
 import com.example.studyMybatis.pojo.SysUser;
-import com.example.studyMybatis.pojo.SysUserRole;
-import com.example.studyMybatis.type.Enabled;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +13,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import javax.management.relation.Role;
-import java.util.Date;
 import java.util.List;
 
 @SpringBootApplication
