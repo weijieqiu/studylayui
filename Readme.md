@@ -1,3 +1,9 @@
+## 2019-12-10
+`restful` 风格接口设计 
+https://mp.weixin.qq.com/s/0QtcK2wJNLOENJDq6646fA
+![result](./image/Snipaste_2019-12-10_10-53-03.png "binaryTree")
+内容:`com.example.studyResultfulAPI`
+
 ## 2019-12-02
 - `MyBatis` 枚举自定义类型使用
 ## 2019-11-28

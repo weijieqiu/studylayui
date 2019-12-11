@@ -12,20 +12,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.List;
 
 @SpringBootApplication
 @MapperScan("com.example.studyMybatis.mapper")
+@ComponentScan("com.example.*")
 public class StudylayuiApplication implements CommandLineRunner {
 
     private final static Logger logger = LoggerFactory.getLogger(StudylayuiApplication.class);
-
 
     @Autowired
     private UserMapper userMapper;
     @Autowired
     private RoleMapper roleMapper;
+
 
     public static void main(String[] args) {
         SpringApplication.run(StudylayuiApplication.class, args);
@@ -52,7 +54,7 @@ public class StudylayuiApplication implements CommandLineRunner {
         //testSelectAllUserAndRoles();
         //testGetAllRoleAndPrivilege();
         //testSelectAllUserAndRoleAndPrivilege();
-        testUpdateById();
+        //testUpdateById();
     }
 
     private void testSelectAllUserAndRoleAndPrivilege() {
