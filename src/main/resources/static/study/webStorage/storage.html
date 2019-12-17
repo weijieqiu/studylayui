@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>Storage 示例</h2>
+<input type="text" id="input"/>
+<!-- 定义是否用 Local Storage 保存数据的复选框-->
+使用用 Local Storage 保存: <input type="checkbox" id="local"/>
+<div id="show"></div>
+<input type="button" value="保存数据" onclick="saveStorage('input');">
+<input type="button" value="读取数据" onclick="loadStorage('show');">
+<script type="text/javascript">
+    var saveStorage = function (id) {
+        var checked = document.getElementById("local").checked;
+        var storage = checked ? localStorage : sessionStorage;
+
+    }
+</script>
+</body>
+</html>
