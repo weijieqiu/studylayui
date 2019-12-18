@@ -1,3 +1,5 @@
+## 2019-12-18
+`ES6` 数组 map\reduce\filter\forEach 的使用
 ## 2019-12-17
 复习 `java io nio`文件等使用
 ## 2019-12-10

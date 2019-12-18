@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 数组语法学习</title>
+</head>
+<body>
+<script>
+    /**
+     * map、reduce、filter、forEach
+     * @type {number[]}
+     */
+    let array1 = [2,3,4,5,6];
+    // let result = array1.map(function (item,index,array) {
+    //     console.log(item * 2)
+    //     return item * 2;
+    // })
+    let result1 = array1.map((item,index,array) => {
+        console.log(item * 2);
+        return item * 2;
+    });
+    console.log("result1: " + result1)
+
+    let array2 = [2,3,4,5,6];
+    let result2 = array2.reduce((previousValue, currentValue, currentIndex, array) => {
+        console.log(previousValue + currentValue)
+        return previousValue + currentValue;
+    });
+    console.log("result2: " + result2)
+
+    let array3 = [2,3,4,5,6];
+    let result3 = array3.filter((value, index, array) => {
+        return value> 4;
+    });
+    console.log(result3)
+
+
+    let array4 = [2,3,4,5,6];
+    array4.forEach((value, index, array) => {
+        console.log("array4:" + value);
+    });
+</script>
+</body>
+</html>
