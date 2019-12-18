@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格显示</title>
+    <link rel="stylesheet" href="../../vue/element-ui/css/index.css"/>
+</head>
+<body>
+<div id="app">
+    <el-input v-model="searchData" placeholder="请输入内容"></el-input>
+    <el-table :data="tableDataFilter" height="250" border>
+        <el-table-column prop="date" label="日期" width="200"></el-table-column>
+        <el-table-column prop="name" label="姓名" width="200"></el-table-column>
+        <el-table-column prop="address" label="地址" width="200"></el-table-column>
+    </el-table>
+    <div id="add">
+        <input placeholder="请输入姓名" v-model="name"/>
+        <input placeholder="请输入地址" v-model="address"/>
+        <button @click.prevent="add()">添加</button>
+    </div>
+    <table>
+        <tr>
+            <th>日期</th>
+            <th>姓名</th>
+            <th>地址</th>
+        </tr>
+        <tbody>
+            <tr v-for="item in tableData">
+                <td>{{item.date}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="../../vue/js/vue.js"></script>
+<script src="../../vue/element-ui/js/index.js"></script>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                tableData:[{
+                    date: new Date(),
+                    name: "test",
+                    address: "address..."
+                },{
+                    date: new Date(),
+                    name: "test1",
+                    address: "address1..."
+                },{
+                    date: new Date(),
+                    name: "test2",
+                    address: "address2..."
+                }],
+                searchData: '',
+                name: '',
+                address: ''
+            }
+        },
+        methods: {
+          add() {
+
+              var object = {};
+              object.date = new Date();
+              object.name = this.name;
+              object.address = this.address;
+              this.tableData.push(object)
+              alert(JSON.stringify(object));
+          }
+        },
+        computed: {
+
+            tableDataFilter: function (searchData) {
+
+                return this.tableData.filter((item)=>{
+                    if(item.name.includes(searchData)){
+                        return true;
+                    }else {
+                        return false;
+                    }
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,12 +1,14 @@
 ## 2019-12-18
-`ES6` 数组 map\reduce\filter\forEach 的使用
+- 使用 vue 结合`ES6` 数组 map\reduce\filter\forEach 的使用实现table添加
+![result](./image/Snipaste_2019-12-18_14-23-45.png "binaryTree")
+- `ES6` 数组 map\reduce\filter\forEach 的使用
 ## 2019-12-17
-复习 `java io nio`文件等使用
+- 复习 `java io nio`文件等使用
 ## 2019-12-10
-`restful` 风格接口设计 
-https://mp.weixin.qq.com/s/0QtcK2wJNLOENJDq6646fA
+- `restful` 风格接口设计 
+- https://mp.weixin.qq.com/s/0QtcK2wJNLOENJDq6646fA
 ![result](./image/Snipaste_2019-12-10_10-53-03.png "binaryTree")
-内容:`com.example.studyResultfulAPI`
+- 内容:`com.example.studyResultfulAPI`
 
 ## 2019-12-02
 - `MyBatis` 枚举自定义类型使用
