@@ -1,3 +1,7 @@
+## 2019-12-20
+- 使用 `lombok`
+## 2019-12-19
+- 使用 `MBG`
 ## 2019-12-18
 - 使用 vue 结合`ES6` 数组 map\reduce\filter\forEach 的使用实现table添加
 ![result](./image/Snipaste_2019-12-18_14-23-45.png "binaryTree")
