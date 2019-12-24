@@ -6,6 +6,8 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/mybatis_study?serverTimezone=UTC&useSSL=false
     username: root
     password: Admin123.
+
+
 mybatis:
     mapper-locations: classpath:/mybatis/mapper/*.xml
     configuration:

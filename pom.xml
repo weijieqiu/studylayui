@@ -40,6 +40,13 @@
             </exclusions>
         </dependency>
 
+        <!--WebService 相关jar-->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+            <version>3.2.4</version>
+        </dependency>
+
 
         <!-- SpringBoot 整合 持久层       -->
         <!--引入mybatis-->
