@@ -18,8 +18,8 @@ import java.util.List;
 
 @SpringBootApplication
 @MapperScan("com.example.studyMybatis.mapper")
-@ComponentScan("com.example.*")
-public class StudylayuiApplication implements CommandLineRunner {
+@ComponentScan("com.example.studyjwt.*")
+public class StudylayuiApplication{
 
     private final static Logger logger = LoggerFactory.getLogger(StudylayuiApplication.class);
 
@@ -32,30 +32,30 @@ public class StudylayuiApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(StudylayuiApplication.class, args);
     }
-
-    /**
-     * 测试 myBatis 方法 参考 《MyBatis 从入门到精通》 写的
-     * @param args
-     * @throws Exception
-     */
-    @Override
-    public void run(String... args) throws Exception {
-        //SysUser sysUser = userMapper.selectById(1L);
-        //System.out.println(sysUser.toString());
-        //List<SysUser> userList = userMapper.selectAll();
-        //for (SysUser sysUser1 : userList){
-        //    System.out.println(sysUser1);
-        //}
-        //testDeleteById();
-        //testUpdateByIdSelective();
-        //testSelectAllUserAndRoles();
-        //testGetAllSysRole();
-        //testGetAllRoleAndPrivilege();
-        //testSelectAllUserAndRoles();
-        //testGetAllRoleAndPrivilege();
-        //testSelectAllUserAndRoleAndPrivilege();
-        //testUpdateById();
-    }
+    //
+    ///**
+    // * 测试 myBatis 方法 参考 《MyBatis 从入门到精通》 写的
+    // * @param args
+    // * @throws Exception
+    // */
+    //@Override
+    //public void run(String... args) throws Exception {
+    //    //SysUser sysUser = userMapper.selectById(1L);
+    //    //System.out.println(sysUser.toString());
+    //    //List<SysUser> userList = userMapper.selectAll();
+    //    //for (SysUser sysUser1 : userList){
+    //    //    System.out.println(sysUser1);
+    //    //}
+    //    //testDeleteById();
+    //    //testUpdateByIdSelective();
+    //    //testSelectAllUserAndRoles();
+    //    //testGetAllSysRole();
+    //    //testGetAllRoleAndPrivilege();
+    //    //testSelectAllUserAndRoles();
+    //    //testGetAllRoleAndPrivilege();
+    //    //testSelectAllUserAndRoleAndPrivilege();
+    //    //testUpdateById();
+    //}
 
     private void testSelectAllUserAndRoleAndPrivilege() {
 
